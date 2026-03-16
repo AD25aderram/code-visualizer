@@ -6,7 +6,7 @@ import axios from 'axios'
 import type { ExecutionResult, ExecuteRequest, Language, ExampleProgram } from '../types'
 
 // Base URL — uses the Vite proxy in dev, or relative path in production
-const BASE_URL = '/api'
+const BASE_URL = 'https://code-visualizer-production.up.railway.app'
 
 const client = axios.create({
   baseURL: BASE_URL,
