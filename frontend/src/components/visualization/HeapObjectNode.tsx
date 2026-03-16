@@ -115,9 +115,9 @@ function SetContent({ obj }: { obj: HeapObject }) {
       {items.map((item, i) => (
         <div
           key={i}
-          className={`px-1.5 py-0.5 bg-editor-bg/60 border border-white/10 rounded font-mono text-[11px] ${getTypeColor((item as SerializedValue).type)}`}
+          className={`px-1.5 py-0.5 bg-editor-bg/60 border border-white/10 rounded font-mono text-[11px] ${getTypeColor((item as unknown as SerializedValue).type)}`}
         >
-          {formatValue(item as SerializedValue)}
+          {formatValue(item as unknown as SerializedValue)}
         </div>
       ))}
     </div>
